@@ -1,0 +1,33 @@
+﻿<Window x:Class="IPLManagementSystemPL.Ticket_Category_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPLManagementSystemPL"
+        mc:Ignorable="d"
+        Title="Ticket_Category_Window" Height="700" Width="800" MaxHeight="700" MaxWidth="800" MinHeight="700" MinWidth="800" Background="#FF7C95CC" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="label2" Content="Welcome to Tickets Category, Please enter details according to the operation" VerticalAlignment="Top" Margin="39,86,191.846,0" Height="36" FontSize="15" Background="{x:Null}" FontWeight="Medium"/>
+        <StackPanel RenderTransformOrigin="0.5,4.775" Margin="0,0,-0.154,0" Height="89" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+            <Image Source="C:\Users\hp\Desktop\ipl logo 2.jpeg" Height="89" Margin="0,0,-0.154,0" Stretch="Fill"/>
+        </StackPanel>
+        <Label Content="Id" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="177,122,557,0" FontSize="18" RenderTransformOrigin="0.329,0.808" Width="58" FontWeight="Medium"/>
+        <Label Content="Name" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="154,164,550,0" FontSize="18" Width="88" FontWeight="Medium"/>
+        <TextBox x:Name="txt_ticketCategoryId" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="327,127,292,0" FontSize="16" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txt_ticketCategoryName" HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="173" Margin="327,172,292,0" FontSize="16"/>
+        <Button x:Name="btn_addTicketCategory" Content="Add TicketCategory" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="63,240,0,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.494,0.501" HorizontalContentAlignment="Center" Background="White" d:LayoutOverrides="VerticalAlignment" Height="40" Click="btn_addTicketCategory_Click"/>
+        <Button x:Name="btn_updateTicketCategory" Content="Update TicketCategory" VerticalAlignment="Top" Margin="229,240,392.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.525,0.438" HorizontalContentAlignment="Center" Background="White" d:LayoutOverrides="VerticalAlignment" Height="40" Click="btn_updateTicketCategory_Click"/>
+        <Button x:Name="btn_deleteTicketCategory" Content="Delete TicketCategory" VerticalAlignment="Top" Margin="0,240,216.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.507,0.563" HorizontalContentAlignment="Center" Background="White" HorizontalAlignment="Right" Width="156" d:LayoutOverrides="VerticalAlignment" Height="40" Click="btn_deleteTicketCategory_Click"/>
+        <Button x:Name="btn_viewTicketCategory" Content="View TicketCategory" HorizontalAlignment="Right" VerticalAlignment="Top" Width="148" Margin="0,240,46.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.513,0.501" HorizontalContentAlignment="Center" Background="White" d:LayoutOverrides="VerticalAlignment" Height="40" Click="btn_viewTicketCategory_Click"/>
+        <DataGrid x:Name="dg_ticketCategoryDataGrid" Margin="39,321,65.846,95.262"/>
+    </Grid>
+</Window>

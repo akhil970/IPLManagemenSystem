@@ -1,0 +1,51 @@
+﻿<Window x:Class="IPLManagementSystemPL.Player_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPLManagementSystemPL"
+        mc:Ignorable="d"
+        Title="Player_Window" Height="700" Width="800" MaxHeight="700" MaxWidth="800" MinHeight="600" MinWidth="800" Background="#FF7C95CC" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="label2" Content="Welcome to Player Section, Please enter details according to the operation" VerticalAlignment="Top" Margin="39,86,191.846,0" Height="36" FontSize="15" Background="{x:Null}" FontWeight="Medium"/>
+        <StackPanel RenderTransformOrigin="0.5,4.775" Margin="0,0,-0.154,0" Height="89" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+            <Image Source="C:\Users\hp\Desktop\ipl logo 2.jpeg" Height="89" Margin="0,0,-0.154,0" Stretch="Fill"/>
+        </StackPanel>
+        <Label Content="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,136,0,0" FontSize="18" RenderTransformOrigin="0.329,0.808" Width="58" FontWeight="Medium"/>
+        <Label Content="Team Id" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,136,265.846,0" FontSize="18" Width="127" FontWeight="Medium"/>
+        <Label Content="Speciality Id" VerticalAlignment="Top" Margin="0,180,265.846,0" FontSize="18" FontWeight="Medium" HorizontalAlignment="Right" Width="127"/>
+        <Label Content="Photo Id" HorizontalAlignment="Right" Margin="0,227,260.846,0" VerticalAlignment="Top" FontSize="18" Width="127" FontWeight="Medium"/>
+        <TextBox x:Name="txt_playerId" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="136,139,0,0" FontSize="16" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="174">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txt_playerTeamId" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,138,87.846,0" FontSize="16" HorizontalAlignment="Right" Width="174"/>
+        <TextBox x:Name="txt_playerSpecialityId" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,190,86.846,0" FontSize="16" HorizontalAlignment="Right" Width="174" />
+        <TextBox x:Name="txt_playerPhotoId" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,238,86.846,0" FontSize="16" HorizontalAlignment="Right" Width="174"/>
+        <Button x:Name="btn_addPlayer" Content="Add Player" HorizontalAlignment="Left" VerticalAlignment="Top" Width="143" Margin="75,292,0,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.494,0.501" HorizontalContentAlignment="Center" Background="White" d:LayoutOverrides="VerticalAlignment" Click="btn_addPlayer_Click" Height="36"/>
+        <Button x:Name="btn_updatePlayer" Content="Update Player" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Margin="240,292,0,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.525,0.438" HorizontalContentAlignment="Center" Background="White" d:LayoutOverrides="VerticalAlignment" Click="btn_updatePlayer_Click" Height="36"/>
+        <Button x:Name="btn_deletePlayer" Content="Delete Player" VerticalAlignment="Top" Margin="0,292,260.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.507,0.563" HorizontalContentAlignment="Center" Background="White" HorizontalAlignment="Right" Width="125" d:LayoutOverrides="VerticalAlignment" Click="btn_deletePlayer_Click" Height="36"/>
+        <Button x:Name="btn_viewPlayer" Content="View Player" HorizontalAlignment="Right" VerticalAlignment="Top" Width="122" Margin="0,292,86.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.513,0.501" HorizontalContentAlignment="Center" Background="White" d:LayoutOverrides="VerticalAlignment" Click="btn_viewPlayer_Click" Height="36"/>
+        <DataGrid x:Name="dg_playerDataGrid" Margin="54,0,50.846,88.262" Height="207" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment"/>
+        <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,180,0,0" FontSize="18" Width="127" FontWeight="Medium"/>
+        <TextBox x:Name="txt_playerName" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="134,191,0,0" FontSize="16" HorizontalAlignment="Left" Width="175"/>
+        <Label Content="Age" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,227,0,0" FontSize="18" RenderTransformOrigin="0.329,0.808" Width="58" FontWeight="Medium"/>
+        <TextBox x:Name="txt_playerAge" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Margin="136,239,0,0" FontSize="16" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="174">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+    </Grid>
+</Window>

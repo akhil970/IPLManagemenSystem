@@ -1,0 +1,42 @@
+﻿<Window x:Class="IPLManagementSystemPL.Schedule_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPLManagementSystemPL"
+        mc:Ignorable="d"
+        Title="Schedule_Window" Height="700" Width="800" MaxHeight="700" MaxWidth="800" MinHeight="700" MinWidth="800" Background="#FF7C95CC" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel RenderTransformOrigin="0.498,0.799" Grid.ColumnSpan="2" Margin="0,0,-0.154,-0.077" Height="372" VerticalAlignment="Top">
+            <Image Source="C:\Users\hp\Desktop\ipl logo 2.jpeg" Height="89" Margin="0,0,-0.154,0" Stretch="Fill"/>
+        </StackPanel>
+        <Label x:Name="label2" Content="Welcome to schedule window, Please enter details according to the operation" VerticalAlignment="Top" Margin="39,86,195.846,0" Height="36" FontSize="15" Background="{x:Null}" FontWeight="Medium"/>
+        <Label Content="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,122,0,0" FontSize="18" RenderTransformOrigin="0.329,0.808" Width="58"/>
+        <Label Content="MatchId" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="84,181,0,0" FontSize="18" Width="88"/>
+        <Label Content="VenueId" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,250,0,0" FontSize="18"/>
+        <Label Content="Date" HorizontalAlignment="Right" Margin="0,131,306.846,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Sart Time" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,181,251.846,0" FontSize="18" Width="111"/>
+        <TextBox x:Name="txt_sheduleId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="196,132,0,0" FontSize="16" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5" d:LayoutOverrides="HorizontalAlignment">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txt_scheduleMatchId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="193,192,0,0" FontSize="16" d:LayoutOverrides="HorizontalAlignment"/>
+        <TextBox x:Name="txt_scheduleVenueId" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="193,260,0,0" FontSize="16" d:LayoutOverrides="HorizontalAlignment" />
+        <TextBox x:Name="txt_scheduleDate" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="529,137,0,0" FontSize="16"/>
+        <TextBox x:Name="txt_scheduleStartTime" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="529,192,0,0" FontSize="16"/>
+        <Label Content="EndTime" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,250,251.846,0" FontSize="18" Width="111" d:LayoutOverrides="VerticalAlignment"/>
+        <TextBox x:Name="txt_scheduleEndTime" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="529,261,0,0" FontSize="16" d:LayoutOverrides="VerticalAlignment"/>
+        <Button x:Name="btn_viewSchedule" Content="View Schedule" HorizontalAlignment="Left" Width="125" Margin="594,0,0,324.262" FontSize="15" FontWeight="Medium" Height="30" VerticalAlignment="Bottom" Click="btn_viewSchedule_Click"/>
+        <Button x:Name="btn_deleteSchedule" Content="Delete Schedule" HorizontalAlignment="Left" Width="125" Margin="423,0,0,324.262" FontSize="15" FontWeight="Medium" Height="30" VerticalAlignment="Bottom" Click="btn_deleteSchedule_Click"/>
+        <Button x:Name="btn_updateSchedule" Content="Update Schedule" HorizontalAlignment="Left" Width="133" Margin="242,0,0,324.262" FontSize="15" FontWeight="Medium" Height="30" VerticalAlignment="Bottom" Click="btn_updateSchedule_Click"/>
+        <Button x:Name="btn_addSchedule" Content="Add Schedule" HorizontalAlignment="Left" Width="117" Margin="76,0,0,324.262" FontSize="15" FontWeight="Medium" Height="30" VerticalAlignment="Bottom" Click="btn_addSchedule_Click"/>
+        <DataGrid x:Name="dg_scheduleDataGrid" Height="199" VerticalAlignment="Bottom" Margin="61,0,62.846,95.262"/>
+
+    </Grid>
+</Window>

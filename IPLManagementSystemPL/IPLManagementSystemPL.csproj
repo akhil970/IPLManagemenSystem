@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A9B79E2-8462-4B7E-9FC1-C97438F2102C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IPLManagementSystemPL</RootNamespace>
+    <AssemblyName>IPLManagementSystemPL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IPLManagementSystemPL.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EncryptionDecryption">
+      <HintPath>G:\.Net All Practice\EncryptionDecryption\bin\Debug\EncryptionDecryption.dll</HintPath>
+    </Reference>
+    <Reference Include="IPLManagementSystemBL">
+      <HintPath>..\IPLManagementSystemBL\bin\Debug\IPLManagementSystemBL.dll</HintPath>
+    </Reference>
+    <Reference Include="IPLManagementSystemDoL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IPLManagementSystemDoL\bin\Debug\IPLManagementSystemDoL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Customer Matches Page.xaml.cs">
+      <DependentUpon>Customer Matches Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Teams Window.xaml.cs">
+      <DependentUpon>Customer Teams Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Tickets Window.xaml.cs">
+      <DependentUpon>Customer Tickets Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Window.xaml.cs">
+      <DependentUpon>Customer Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Login Window.xaml.cs">
+      <DependentUpon>Employee Login Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IPLManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IPLManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Match Window.xaml.cs">
+      <DependentUpon>Match Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="News Window.xaml.cs">
+      <DependentUpon>News Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Player Photo Window.xaml.cs">
+      <DependentUpon>Player Photo Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Player Window.xaml.cs">
+      <DependentUpon>Player Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Roles Details Window.xaml.cs">
+      <DependentUpon>Roles Details Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule Window.xaml.cs">
+      <DependentUpon>Schedule Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics Window.xaml.cs">
+      <DependentUpon>Statistics Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teams Window.xaml.cs">
+      <DependentUpon>Teams Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket Category Window.xaml.cs">
+      <DependentUpon>Ticket Category Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket Window.xaml.cs">
+      <DependentUpon>Ticket Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tickets Window.xaml.cs">
+      <DependentUpon>Tickets Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Details Window.xaml.cs">
+      <DependentUpon>User Details Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Login Window.xaml.cs">
+      <DependentUpon>User Login Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Roles Window.xaml.cs">
+      <DependentUpon>User Roles Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Venue Window.xaml.cs">
+      <DependentUpon>Venue Window.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Admin Menu Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer Matches Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer Teams Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer Tickets Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Employee Login Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Admin Menu Window.xaml.cs">
+      <DependentUpon>Admin Menu Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Match Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="News Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Player Photo Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Player Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Roles Details Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Schedule Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Statistics Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teams Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ticket Category Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ticket Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tickets Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Details Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Login Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Roles Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Venue Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="IPLManagementSystemDataSet.xsc">
+      <DependentUpon>IPLManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IPLManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IPLManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IPLManagementSystemDataSet.xss">
+      <DependentUpon>IPLManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ipl logo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Match_Images\cskvsmi.png" />
+    <Resource Include="Match_Images\cskvsrcb.png" />
+    <Resource Include="Match_Images\cskvssrh.png" />
+    <Resource Include="Match_Images\mivsrcb.png" />
+    <Resource Include="Match_Images\mivssrh.png" />
+    <Resource Include="Match_Images\srhvsrcb.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

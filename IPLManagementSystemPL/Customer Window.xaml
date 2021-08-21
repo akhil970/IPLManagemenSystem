@@ -1,0 +1,44 @@
+﻿<Window x:Class="IPLManagementSystemPL.Customer_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPLManagementSystemPL"
+        mc:Ignorable="d"
+        Title="Customer_Window" Height="700" Width="1000" Background="#FF7C95CC" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0.489,0.552">
+        <StackPanel RenderTransformOrigin="0.501,4.866" Margin="0,0,-0.031,0" Height="91" VerticalAlignment="Top">
+            <Image Source="C:\Users\hp\Desktop\ipl logo 2.jpeg" Height="89" Margin="0,0,-0.154,0" Stretch="Fill"/>
+        </StackPanel>
+        <Label x:Name="label2" Content="Welcome Customer!, Click on a button to know more" VerticalAlignment="Top" Margin="74,107,0,0" Height="36" FontSize="15" Background="{x:Null}" FontWeight="Medium" FontStyle="Italic" HorizontalAlignment="Left" Width="381"/>
+        <Button x:Name="btn_customerTeams" Content="Teams"  Margin="84,148,0,0" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Height="44" FontSize="15" Click="btn_customerTeams_Click" />
+        <!--<Button x:Name="btn_customerMatches" Content="Matches"  Margin="84,212,0,0" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Width="134" Height="32" FontSize="15" Click="btn_customerMatches_Click" />-->
+        <Button x:Name="btn_customerTickets" Content="Tickets"  Margin="256,148,0,0" FontWeight="Medium" VerticalAlignment="Top" HorizontalAlignment="Left" Width="156" Height="44" FontSize="15" Click="btn_customerTickets_Click" />
+        <Button x:Name="btn_customerNews" Content="News"  Margin="84,287,0,0" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" Width="166" FontSize="18" Height="46" Click="btn_customerNews_Click" d:LayoutOverrides="VerticalAlignment" />
+        <Button x:Name="btn_customerStatistics" Content="Statistics"  Margin="84,0,0,112.262" FontWeight="Medium" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="166" Height="53" FontSize="18" Click="btn_customerStatistics_Click" />
+        <DataGrid x:Name="dg_customerDataGrid_News" Margin="337,197,9.969,223.262" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding ="{Binding Date}" Header="Date"/>
+                <DataGridTextColumn Binding = "{Binding Match}" Header="Match" />
+                <DataGridTemplateColumn Header="Matchphoto" >
+
+                    <DataGridTemplateColumn.CellTemplate>
+
+                        <DataTemplate>
+
+                            <Image Height="80" Width="80" Source="{Binding Path = Match_Photo}"></Image>
+
+                        </DataTemplate>
+
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding ="{Binding Match_Photo}" Header="Match_Photo" Visibility="Hidden"/>
+                <DataGridTextColumn Binding ="{Binding Match_Result}" Header="Match_Result" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="dg_customerDataGrid_Statistics" Margin="337,0,9.969,50.262" Height="168" VerticalAlignment="Bottom"/>
+
+
+    </Grid>
+</Window>

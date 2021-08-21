@@ -1,0 +1,58 @@
+﻿<Window x:Class="IPLManagementSystemPL.Statistics_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPLManagementSystemPL"
+        mc:Ignorable="d"
+        Title="Statistics_Window" Height="700" Width="800" MaxHeight="700" MaxWidth="800" MinHeight="700" MinWidth="800" Background="#FF7C95CC" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="label2" Content="Welcome to Statistics Section, Please enter details according to the operation" VerticalAlignment="Top" Margin="39,89,191.846,0" Height="36" FontSize="15" Background="{x:Null}" FontWeight="Medium"/>
+        <StackPanel RenderTransformOrigin="0.5,4.775" Margin="0,0,-0.154,0" Height="89" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+            <Image Source="C:\Users\hp\Desktop\ipl logo 2.jpeg" Height="89" Margin="0,0,-0.154,0" Stretch="Fill"/>
+        </StackPanel>
+        <Label Content="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="73,125,0,0" FontSize="18" RenderTransformOrigin="0.329,0.808" Width="95" FontWeight="Medium"/>
+        <Label Content="Played" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="73,164,0,0" FontSize="18" Width="127" FontWeight="Medium"/>
+        <Label Content="Won" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="73,204,0,0" FontSize="18" Width="95" FontWeight="Medium"/>
+        <Label Content="Lost" HorizontalAlignment="Left" Margin="73,250,0,0" VerticalAlignment="Top" FontSize="18" Width="127" FontWeight="Medium"/>
+        <Label Content="Tied" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="73,303,0,0" FontSize="18" Width="141" FontWeight="Medium"/>
+        <TextBox x:Name="txt_statisticsId" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="185,130,0,0" FontSize="16" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5" ToolTip="hello">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txt_Played" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="185,175,0,0" FontSize="16"/>
+        <TextBox x:Name="txt_Won" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="183,214,0,0" FontSize="16" />
+        <TextBox x:Name="txt_Lost" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="183,261,0,0" FontSize="16"/>
+        <TextBox x:Name="txt_Tied" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="183,303,0,0" FontSize="16" />
+        <Label Content="N/R" VerticalAlignment="Top" Margin="0,164,216.846,0" FontSize="18" FontWeight="Medium" HorizontalAlignment="Right" Width="141"/>
+        <Label Content="Points" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,301,225.846,0" FontSize="18" Width="141" FontWeight="Medium" d:LayoutOverrides="VerticalAlignment"/>
+        <Label Content="Against Team Id" VerticalAlignment="Top" Margin="375,253,267.846,0" FontSize="18" FontWeight="Medium" d:LayoutOverrides="VerticalAlignment"/>
+        <Label Content="NetRR" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,208,225.846,0" FontSize="18" Width="141" FontWeight="Medium" d:LayoutOverrides="VerticalAlignment"/>
+        <TextBox x:Name="txt_N_R" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="0,175,94.846,0" FontSize="16" />
+        <TextBox x:Name="txt_NetRR" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="0,219,94.846,0" FontSize="16" d:LayoutOverrides="VerticalAlignment" />
+        <TextBox x:Name="txt_againstTeamId" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="0,264,94.846,0" FontSize="16" d:LayoutOverrides="VerticalAlignment" />
+        <TextBox x:Name="txt_points" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="0,303,94.846,0" FontSize="16" d:LayoutOverrides="VerticalAlignment" />
+        <Button x:Name="btn_addStatistics" Content="Add Statistics" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Margin="81,379,0,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.494,0.501" HorizontalContentAlignment="Center" Background="White" Click="btn_addStatistics_Click"/>
+        <Button x:Name="btn_updateStatistics" Content="Update Statistics" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Margin="246,379,0,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.525,0.438" HorizontalContentAlignment="Center" Background="White" Click="btn_updateStatistics_Click"/>
+        <Button x:Name="btn_deleteStatistics" Content="Delete Statistics" VerticalAlignment="Top" Margin="0,379,258.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.507,0.563" HorizontalContentAlignment="Center" Background="White" Click="btn_deleteStatistics_Click" HorizontalAlignment="Right" Width="121"/>
+        <Button x:Name="btn_viewStatistics" Content="View Statistics" HorizontalAlignment="Right" VerticalAlignment="Top" Width="121" Margin="0,379,81.846,0" FontWeight="Medium" FontSize="15" RenderTransformOrigin="0.513,0.501" HorizontalContentAlignment="Center" Background="White" Click="btn_viewStatistics_Click"/>
+        <DataGrid x:Name="dg_statisticsDataGrid" Margin="62,0,42.846,53.262" Height="192" VerticalAlignment="Bottom" d:LayoutOverrides="VerticalAlignment"/>
+        <Label Content="TeamId" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,125,271.846,0" FontSize="18" RenderTransformOrigin="0.329,0.808" Width="95" FontWeight="Medium"/>
+        <TextBox x:Name="txt_TeamId" HorizontalAlignment="Right" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="0,134,93.846,0" FontSize="16" TextDecorations="{x:Null}" RenderTransformOrigin="0.5,0.5" ToolTip="hello">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.389"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+    </Grid>
+</Window>
